@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "CitizenFX.Core.Client/1.0.1881": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CitizenFX.Core.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CitizenFX.Core.Client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CitizenFX.Core.Client/1.0.1881": {
+      "sha512": "zDQXcfVJbpOIqpDt57a/mlwwgeo0iY7Fq6g3BjPF3A7VqtPG17jrANpI4utEI/vh2+Qc5cDv/FBBCqS5ABS7KA==",
+      "type": "package",
+      "path": "citizenfx.core.client/1.0.1881",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "citizenfx.core.client.1.0.1881.nupkg.sha512",
+        "citizenfx.core.client.nuspec",
+        "lib/net45/CitizenFX.Core.Client.dll",
+        "lib/net45/CitizenFX.Core.Client.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5.2": [
+      "CitizenFx.Core.Client"
+    ]
+  },
+  "packageFolders": {
+    "/Users/remco/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
+      "projectName": "gghud",
+      "projectPath": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
+      "packagesPath": "/Users/remco/.nuget/packages/",
+      "outputPath": "/Users/remco/Documents/Projects/gghud/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/remco/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net452"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net452": {
+        "dependencies": {
+          "CitizenFx.Core.Client": {
+            "target": "Package",
+            "version": "(, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/remco/Documents/Projects/gghud/gghud.csproj": {}
+  },
+  "projects": {
+    "/Users/remco/Documents/Projects/gghud/gghud.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
+        "projectName": "gghud",
+        "projectPath": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
+        "packagesPath": "/Users/remco/.nuget/packages/",
+        "outputPath": "/Users/remco/Documents/Projects/gghud/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/remco/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net452"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net452": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net452": {
+          "dependencies": {
+            "CitizenFx.Core.Client": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
