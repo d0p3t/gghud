@@ -2,10 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
+    <RootNamespace>gghud</RootNamespace>
+    <AssemblyName>gghud.net</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CitizenFx.Core.Client" Version="1.0.1881" />
+    <PackageReference Include="CitizenFx.Core.Client" Version="1.0.1883" />
   </ItemGroup>
 
 </Project>

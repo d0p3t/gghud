@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.5.2": {
-      "CitizenFX.Core.Client/1.0.1881": {
+      "CitizenFX.Core.Client/1.0.1883": {
         "type": "package",
         "compile": {
           "lib/net45/CitizenFX.Core.Client.dll": {}
@@ -14,14 +14,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Client/1.0.1881": {
-      "sha512": "zDQXcfVJbpOIqpDt57a/mlwwgeo0iY7Fq6g3BjPF3A7VqtPG17jrANpI4utEI/vh2+Qc5cDv/FBBCqS5ABS7KA==",
+    "CitizenFX.Core.Client/1.0.1883": {
+      "sha512": "Nyv3YFahc75MSoQAxgFbv5aklTxuPJ0XQ0/GfYa3FaZ51QFP1QmELhilbjZzeFRM6w8h6FoMcbWTzzL+yYk3Bg==",
       "type": "package",
-      "path": "citizenfx.core.client/1.0.1881",
+      "path": "citizenfx.core.client/1.0.1883",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.client.1.0.1881.nupkg.sha512",
+        "citizenfx.core.client.1.0.1883.nupkg.sha512",
         "citizenfx.core.client.nuspec",
         "lib/net45/CitizenFX.Core.Client.dll",
         "lib/net45/CitizenFX.Core.Client.xml"
@@ -30,28 +30,34 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5.2": [
-      "CitizenFx.Core.Client"
+      "CitizenFx.Core.Client >= 1.0.1883"
     ]
   },
   "packageFolders": {
-    "/Users/remco/.nuget/packages/": {}
+    "C:\\Users\\Remco Troost\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
-      "projectName": "gghud",
-      "projectPath": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
-      "packagesPath": "/Users/remco/.nuget/packages/",
-      "outputPath": "/Users/remco/Documents/Projects/gghud/obj/",
+      "projectUniqueName": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj",
+      "projectName": "gghud.net",
+      "projectPath": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj",
+      "packagesPath": "C:\\Users\\Remco Troost\\.nuget\\packages\\",
+      "outputPath": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/remco/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Remco Troost\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net452"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -70,10 +76,10 @@
         "dependencies": {
           "CitizenFx.Core.Client": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[1.0.1883, )"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,25 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/remco/Documents/Projects/gghud/gghud.csproj": {}
+    "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj": {}
   },
   "projects": {
-    "/Users/remco/Documents/Projects/gghud/gghud.csproj": {
+    "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
-        "projectName": "gghud",
-        "projectPath": "/Users/remco/Documents/Projects/gghud/gghud.csproj",
-        "packagesPath": "/Users/remco/.nuget/packages/",
-        "outputPath": "/Users/remco/Documents/Projects/gghud/obj/",
+        "projectUniqueName": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj",
+        "projectName": "gghud.net",
+        "projectPath": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\gghud.csproj",
+        "packagesPath": "C:\\Users\\Remco Troost\\.nuget\\packages\\",
+        "outputPath": "D:\\fivemserver\\server-data-tests\\resources\\gghud\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/remco/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Remco Troost\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net452"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,10 +43,10 @@
           "dependencies": {
             "CitizenFx.Core.Client": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[1.0.1883, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
