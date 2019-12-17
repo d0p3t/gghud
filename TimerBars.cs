@@ -31,9 +31,6 @@ namespace gghud
                 {
                     m_firstTick = false;
 
-                    m_resolution = Utils.ResolutionMaintainRatio;
-                    m_safeBounds = Utils.SafezoneBounds;
-
                     if (!HasStreamedTextureDictLoaded("timerbars"))
                     {
                         RequestStreamedTextureDict("timerbars", false);

@@ -32,7 +32,7 @@ namespace gghud.Models
 
         public override void Draw(int interval, SizeF res, PointF safe)
         {
-            //base.Draw(interval, res, safe);
+            base.Draw(interval, res, safe);
             new UIText(Text, new PointF(res.Width - safe.X - 10, res.Height - safe.Y - (42 + (4 * interval))), 0.5f, Color.White, Font.ChaletLondon, Alignment.Right).Draw(SizeF.Empty);
         }
     }
