@@ -40,5 +40,20 @@ namespace gghud
                 return new Point((int)Math.Round(g * wmp), (int)Math.Round(g * 5.4f));
             }
         }
+
+        public static float Clamp(float value, float inclusiveMinimum, float inlusiveMaximum)
+        {
+            if (value >= inclusiveMinimum)
+            {
+                if (value <= inlusiveMaximum)
+                {
+                    return value;
+                }
+
+                return inlusiveMaximum;
+            }
+
+            return inclusiveMinimum;
+        }
     }
 }

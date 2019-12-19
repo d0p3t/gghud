@@ -65,7 +65,7 @@ namespace gghud
                         var last = v.Bones.LastDamaged;
                         var rp = "+50";
 
-                        if (last == Bone.SKEL_Head)
+                        if (last == Bone.SKEL_Head || last == Bone.SKEL_Neck_1)
                         {
                             rp = "+100";
                         }

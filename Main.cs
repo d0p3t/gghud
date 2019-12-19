@@ -6,29 +6,14 @@ namespace gghud
     public class Main : BaseScript
     {
         public static Main Instance;
-        public static readonly bool IsDebug = false;
+        public static readonly bool IsDebug = true;
 
         public GainedEffects GainedEffects;
         public HudComponents HudComponents;
         public LoadingPrompt LoadingPrompt;
         public TimerBars TimerBars;
 
-        public Main()
-        {
-
-            if (Instance == null)
-                Instance = this;
-
-            GainedEffects = new GainedEffects();
-            HudComponents = new HudComponents();
-            LoadingPrompt = new LoadingPrompt();
-            TimerBars = new TimerBars();
-
-            RegisterScript(GainedEffects);
-            RegisterScript(HudComponents);
-            RegisterScript(LoadingPrompt);
-            RegisterScript(TimerBars);
-        }
+        public Main() { }
 
         [Tick]
         public async Task LoadTick()
@@ -37,10 +22,12 @@ namespace gghud
             {
                 Debug.WriteLine("[HUD] Registering scripts...");
 
+                GainedEffects = new GainedEffects();
                 HudComponents = new HudComponents();
                 LoadingPrompt = new LoadingPrompt();
                 TimerBars = new TimerBars();
 
+                RegisterScript(GainedEffects);
                 RegisterScript(HudComponents);
                 RegisterScript(LoadingPrompt);
                 RegisterScript(TimerBars);

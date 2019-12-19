@@ -2,12 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
+    <DebugType>embedded</DebugType>
     <RootNamespace>gghud</RootNamespace>
-    <AssemblyName>gghud.net</AssemblyName>
+    <TargetName>$(AssemblyName).net</TargetName>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CitizenFx.Core.Client" Version="1.0.1883" />
+    <PackageReference Include="CitizenFx.Core.Client" Version="1.0.*" />
+    <Reference Include="NativeUI">
+      <HintPath>NativeUI.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

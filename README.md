@@ -11,6 +11,10 @@ dotnet restore
 dotnet build
 ```
 
+# Credits
+
+TimerBars https://github.com/alexguirre/RAGENativeUI
+
 # License
 
 MIT
