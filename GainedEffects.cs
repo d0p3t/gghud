@@ -30,12 +30,27 @@ namespace gghud
                 {
                     m_firstTick = false;
 
+                    AddTextEntry("GAIN_FX", "~a~");
+
                     RequestStreamedTextureDict("MPHud", false);
                     m_screenResolution = Screen.Resolution;
                 }
-                m_gainedEffects.ForEach(x => DrawGainedEffect(x, m_screenResolution));
 
-                m_gainedEffects = m_gainedEffects.FindAll(x => x.Ticks > 0);
+                if (m_gainedEffects.Count == 0)
+                {
+                    await Delay(0);
+                    return;
+                }
+
+                var remainingEffects = new List<GainedEffect>();
+
+                foreach (var effect in m_gainedEffects)
+                {
+                    DrawGainedEffect(effect, m_screenResolution);
+                    if (effect.Ticks > 0) remainingEffects.Add(effect);
+                }
+
+                m_gainedEffects = remainingEffects;
             }
             catch (Exception e)
             {
@@ -50,33 +65,23 @@ namespace gghud
         {
             if (eventName != "CEventNetworkEntityDamage") return;
 
-            Entity victim = Entity.FromHandle(int.Parse(data[0].ToString()));
             Entity attacker = Entity.FromHandle(int.Parse(data[1].ToString()));
+            if (attacker == null || attacker.Handle != Game.PlayerPed.Handle) return;
+
             bool victimDied = int.Parse(data[3].ToString()) == 1;
+            if (!victimDied) return;
 
-            if (victim == null || attacker == null || !victimDied) return;
+            Entity victim = Entity.FromHandle(int.Parse(data[0].ToString()));
+            if (victim == null || !(victim is Ped v) || !v.IsPlayer) return;
 
-            if (victim is Ped v)
+            var rp = "+20";
+
+            if (v.Bones.LastDamaged == Bone.SKEL_Head)
             {
-                if (attacker is Ped a)
-                {
-                    if (a.Handle == Game.PlayerPed.Handle)
-                    {
-                        var last = v.Bones.LastDamaged;
-                        var rp = "+50";
-
-                        if (last == Bone.SKEL_Head || last == Bone.SKEL_Neck_1)
-                        {
-                            rp = "+100";
-                        }
-                        var gainedEffect = new GainedEffect(victim.Position, rp, "mp_anim_rp", 1.0f, 25, Game.FPS);
-                        m_gainedEffects.Add(gainedEffect);
-                    }
-                }
+                rp = "+100";
             }
-            uint weaponHash = (uint)int.Parse(data[4].ToString());
-            bool isMeleeDamage = int.Parse(data[9].ToString()) != 0;
-            int vehicleDamageTypeFlag = int.Parse(data[10].ToString());
+            var gainedEffect = new GainedEffect(victim.Position, rp, "mp_anim_rp", 1.0f, 25, Game.FPS);
+            m_gainedEffects.Add(gainedEffect);
         }
 
         private void DrawGainedEffect(GainedEffect gainedEffect, Size screenRes)
@@ -89,9 +94,9 @@ namespace gghud
             SetTextScale(0.45f, 0.45f);
             SetTextDropShadow();
             SetTextOutline();
-            SetTextEntry("STRING");
-            AddTextComponentString(gainedEffect.Text);
-            DrawText(25f / screenRes.Width, (-17f - screenY) / screenRes.Height);
+            BeginTextCommandDisplayText("GAIN_FX");
+            AddTextComponentSubstringPlayerName(gainedEffect.Text);
+            EndTextCommandDisplayText(25f / screenRes.Width, (-17f - screenY) / screenRes.Height);
             DrawSprite("MPHud", gainedEffect.Type, 0f, -screenY / screenRes.Height, size.Width / screenRes.Width, size.Height / screenRes.Height, 0f, 255, 255, 255, 255);
             ClearDrawOrigin();
 

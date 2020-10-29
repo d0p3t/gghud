@@ -1,9 +1,0 @@
-resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
-
-client_scripts {
-    "bin/**/net452/*.net.dll"
-}
-
-files {
-    "NativeUI.dll"
-}

@@ -1,17 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <DebugType>embedded</DebugType>
     <RootNamespace>gghud</RootNamespace>
     <TargetName>$(AssemblyName).net</TargetName>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="CitizenFx.Core.Client" Version="1.0.*" />
-    <Reference Include="NativeUI">
-      <HintPath>NativeUI.dll</HintPath>
+	<PackageReference Include="CitizenFX.Core.Client" Version="1.0.3109" />
+	<Reference Include="Newtonsoft.Json">
+		<HintPath>$(PkgNewtonsoft_Json)\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+	<Reference Include="Microsoft.CSharp" />
   </ItemGroup>
-
 </Project>

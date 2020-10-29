@@ -9,9 +9,8 @@ namespace gghud
         public static readonly bool IsDebug = true;
 
         public GainedEffects GainedEffects;
-        public HudComponents HudComponents;
-        public LoadingPrompt LoadingPrompt;
-        public TimerBars TimerBars;
+
+        private bool isLoaded = false;
 
         public Main() { }
 
@@ -20,18 +19,10 @@ namespace gghud
         {
             try
             {
-                Debug.WriteLine("[HUD] Registering scripts...");
-
+                if (isLoaded) return;
+                isLoaded = true;
                 GainedEffects = new GainedEffects();
-                HudComponents = new HudComponents();
-                LoadingPrompt = new LoadingPrompt();
-                TimerBars = new TimerBars();
-
                 RegisterScript(GainedEffects);
-                RegisterScript(HudComponents);
-                RegisterScript(LoadingPrompt);
-                RegisterScript(TimerBars);
-
                 Debug.WriteLine("[HUD] Registering scripts completed.");
 
                 Tick -= LoadTick;
